@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "107653444316",
+    "project_id": "phoneauth-dd1d9",
+    "storage_bucket": "phoneauth-dd1d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107653444316:android:c42c1c61c5fedd2ccd3a19",
+        "android_client_info": {
+          "package_name": "com.example.bloc_form"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2XOeFi4lug-_0nOf-c8e46RZglTOY8Gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
