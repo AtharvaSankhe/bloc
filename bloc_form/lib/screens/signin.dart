@@ -39,7 +39,9 @@ class SiginScreen extends StatelessWidget {
                   listener: (context, state) {
                     if(state is AuthCodeSentState){
                       // Navigator.push(context, CupertinoPageRoute(builder: (context)=>Verify()));
-                      Navigator.pushNamed(context, "/second");
+                      Navigator.pushNamed(context, "/second",arguments: {
+                        "phoneNo": phoneController.text ,
+                      });
                     }
                   },
                   builder: (context, state) {

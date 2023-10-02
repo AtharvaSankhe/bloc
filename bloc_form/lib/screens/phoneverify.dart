@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubits/auth/auth_cubit.dart';
 
 class Verify extends StatelessWidget {
-  Verify({Key? key}) : super(key: key);
+  final String phoneNo ;
+  Verify({Key? key,required this.phoneNo}) : super(key: key);
 
   final TextEditingController otpController = TextEditingController();
 
@@ -27,11 +28,12 @@ class Verify extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: Column(
               children: [
+                Text("OTP has been sent to phoneNo ${phoneNo}"),
                 TextField(
                   controller: otpController,
                   maxLength: 6,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: "6-Digit OTP",
                       counterText: ""),

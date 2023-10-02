@@ -16,8 +16,10 @@ class Routes {
                   child: SiginScreen(),
                 ));
         case "/second":
+          Map<String,dynamic> arguments = settings.arguments as Map<String,dynamic>;
         return MaterialPageRoute(
-            builder: (context) => Verify());
+            builder: (context) => Verify(phoneNo: arguments["phoneNo"],));
+        default: return null ; // send to error screen
     }
   }
 }
