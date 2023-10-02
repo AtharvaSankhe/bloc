@@ -1,4 +1,5 @@
 import 'package:bloc_form/cubits/auth/auth_cubit.dart';
+import 'package:bloc_form/routes.dart';
 import 'package:bloc_form/screens/signin.dart';
 import 'package:bloc_form/screens/signin/signin_screen.dart';
 import 'package:bloc_form/screens/welcome/welcome_screen.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       create: (context) => AuthCubit(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        onGenerateRoute: Routes.onGenerateRoute,
         home: BlocBuilder<AuthCubit, AuthState>(
           buildWhen: (oldState,newState){
             return oldState is AuthInitial ;
@@ -28,7 +30,9 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             if (state is AuthLoggedInState) {
               return Scaffold(body: Container(color: Colors.red,),);
-            } else {
+            }
+            else
+            {
               return SiginScreen();
             }
           },

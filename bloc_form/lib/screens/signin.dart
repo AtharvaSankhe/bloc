@@ -38,7 +38,8 @@ class SiginScreen extends StatelessWidget {
                 BlocConsumer<AuthCubit, AuthState>(
                   listener: (context, state) {
                     if(state is AuthCodeSentState){
-                      Navigator.push(context, CupertinoPageRoute(builder: (context)=>Verify()));
+                      // Navigator.push(context, CupertinoPageRoute(builder: (context)=>Verify()));
+                      Navigator.pushNamed(context, "/second");
                     }
                   },
                   builder: (context, state) {
